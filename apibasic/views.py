@@ -11,7 +11,7 @@ def article_list(request):
     if request.method=='GET':
         articles=Article.objects.all()
         serializer=ArticleSerializer(articles,many=True) 
-        return JsonResponse(serializer.data, safe=False)   
+        return JsonResponse(serializer.data,  safe=False)   
 
 
     elif request.method=='POST':
