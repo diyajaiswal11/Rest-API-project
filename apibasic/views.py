@@ -18,6 +18,7 @@ class GenericAPIView(generics.GenericAPIView,mixins.ListModelMixin,mixins.Create
     serializer_class=ArticleSerializer 
     queryset=Article.objects.all()
     lookup_field='id'
+    
     #authentication_classes=[SessionAuthentication, BasicAuthentication]
     authentication_classes=[TokenAuthentication]
     permission_classes=[IsAuthenticated]
